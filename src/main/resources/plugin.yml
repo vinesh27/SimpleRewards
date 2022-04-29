@@ -1,0 +1,7 @@
+name: RewardsPlugin
+version: '${project.version}'
+main: io.github.vinesh27.rewardsplugin.RewardsPlugin
+api-version: 1.18
+authors: [ vinesh27, Bastaboii ]
+description: A minimal reward plugin made using Spigot API in Java
+website: https://github.com/vinesh27/simple-rewards
