@@ -108,20 +108,24 @@ public class Util {
         return plugin.getConfig().getString("gui.rankRewards" + reward + ".message");
     }
     
-    public static void reward(Player player, String rank, int index) {
+    public static boolean hasBeenRewarded(Player player, String rank) {
+        return false;
+    }
+    
+    public static void reward(Player player, String rank) {
         // Check if it has been 24 hours since the player was rewarded
-        if(true) {
+        if(!hasBeenRewarded(player, rank)) {
             Reward reward = getRewardsByRank(rank);
             for (ItemStack itemStack : reward.getItems())
                 player.getWorld()
-                    .dropItem(player.getLocation(), itemStack)
+                    .dropItemNaturally(player.getLocation(), itemStack)
                     .setOwner(player.getUniqueId());
             for (String command : reward.getCommands())
-                Bukkit
-                    .dispatchCommand(
-                        Bukkit.getConsoleSender(),
-                        command.replace("{player}", player.getName())
-                    );
+                Bukkit.dispatchCommand(
+                    Bukkit.getConsoleSender(),
+                    command.replace("{player}", player.getName())
+                );
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', getMessage(rank)));
         } else {
             player.playSound(player, Sound.ENTITY_VILLAGER_NO, 1, 1);
             player.sendMessage(ChatColor.RED + "You have already been rewarded today!");

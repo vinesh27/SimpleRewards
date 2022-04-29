@@ -58,8 +58,7 @@ public class RewardGUI implements Listener {
             (Player) e.getWhoClicked(),
             Util.getPlayerRank(
                 (Player) e.getWhoClicked()
-            ),
-            e.getSlot()
+            )
         );
     }
     
