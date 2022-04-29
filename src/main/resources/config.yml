@@ -1,0 +1,87 @@
+# For the material property, refer to https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+# (DON'T USE THE ONES THAT INCLUDE LEGACY IN THEIR NAME)
+
+# material is for the item type (stone sword or a stone block etc etc)
+# name is for the item name (u can include colour codes as well)
+# description is for the item description (who would've guessed), add \n for new lines
+
+# This is for customizing the items in the /rewards GUI
+gui:
+  # For the rank rewards items, the first 5 items
+  rankRewards:
+    # For the regular reward
+    regular:
+      message: "§aYou have received a regular reward!"
+      material: "STONE_SWORD"
+      name: "§aRegular Reward"
+      description: "§aRegular Reward Description"
+    # For the VIP reward
+    vip:
+      message: "§aYou have received a VIP reward!"
+      material: "IRON_SWORD"
+      name: "§aVIP Reward"
+      description: "§aVIP Reward Description"
+    # For the VIP+ reward
+    vipPlus:
+      message: "§aYou have received a VIP+ reward!"
+      material: "GOLDEN_SWORD"
+      name: "§aVIP+ Reward"
+      description: "§aVIP+ Reward Description"
+    # For the MVP reward
+    mvp:
+      message: "§aYou have received a MVP reward!"
+      material: "DIAMOND_SWORD"
+      name: "§aMVP Reward"
+      description: "§aMVP Reward Description"
+    # For the MVP+ reward
+    mvpPlus:
+      message: "§aYou have received a MVP+ reward!"
+      material: "NETHERITE_SWORD"
+      name: "§aMVP+ Reward"
+      description: "§aMVP+ Reward Description"
+
+  # For the voter rewards
+  voteReward:
+    message: "§aYou have received a vote reward!"
+    material: "NETHER_STAR"
+    name: "§aVote Reward"
+    description: "§aVote Reward Description"
+
+  # For the slots that are not used
+  bgMaterial: "GRAY_STAINED_GLASS"
+
+
+# For items, add a string to the item key with
+# a | in middle, and MATERIAL on the left & COUNT on the right
+# Example: STONE|1 or DIAMOND_SWORD|5
+
+# For commands, just type the command in the commands key
+# If you want to mention the player's name enter {player}
+# Example: /give {player} DIAMOND_SWORD
+
+# Configuration related to rewards based on ranks
+rewards:
+  # For the regular rank
+  regular:
+    items: ["MATERIAL|COUNT", "MATERIAL|COUNT"]
+    commands: ["COMMAND", "COMMAND"]
+  # For the VIP rank
+  vip:
+    items: ["MATERIAL|COUNT", "MATERIAL|COUNT"]
+    commands: ["COMMAND", "COMMAND"]
+  # For the VIP+ rank
+  vipPlus:
+    items: ["MATERIAL|COUNT", "MATERIAL|COUNT"]
+    commands: ["COMMAND", "COMMAND"]
+  # For the MVP rank
+  mvp:
+    items: ["MATERIAL|COUNT", "MATERIAL|COUNT"]
+    commands: ["COMMAND", "COMMAND"]
+  # For the MVP+ rank
+  mvpPlus:
+    items: ["MATERIAL|COUNT", "MATERIAL|COUNT"]
+    commands: ["COMMAND", "COMMAND"]
+  # For the Voter Rewards
+  vote:
+    items: ["MATERIAL|COUNT", "MATERIAL|COUNT"]
+    commands: ["COMMAND", "COMMAND"]
