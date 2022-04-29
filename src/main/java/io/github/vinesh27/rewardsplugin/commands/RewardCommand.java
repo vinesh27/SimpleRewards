@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 public class RewardCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        new RewardGUI((Player) sender);
+        new RewardGUI().openInventory((Player) sender);
         return true;
     }
 }

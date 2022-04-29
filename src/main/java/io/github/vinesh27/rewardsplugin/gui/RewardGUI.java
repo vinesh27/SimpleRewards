@@ -18,25 +18,14 @@ import java.util.Arrays;
 public class RewardGUI implements Listener {
     private final Inventory inv;
     
-    public RewardGUI(Player player) {
-        inv = Bukkit.createInventory(player, 9, "Daily Rewards");
+    public RewardGUI() {
+        inv = Bukkit.createInventory(null, 9, "Daily Rewards");
         initializeItems();
     }
     
     public void initializeItems() {
         ItemStack[] items = Util.getRewardGUI();
         for (int i = 0; i < items.length; i++) inv.setItem(i, items[i]);
-    }
-    
-    // A helper method to create an item for the GUI
-    protected ItemStack createGuiItem(final Material material, final String name, final String... lore) {
-        final ItemStack item = new ItemStack(material, 1);
-        final ItemMeta meta = item.getItemMeta();
-        assert meta != null;
-        if(name != null) meta.setDisplayName(name);
-        if(lore != null) meta.setLore(Arrays.asList(lore));
-        if(name != null && lore != null) item.setItemMeta(meta);
-        return item;
     }
     
     // To open the inventory
