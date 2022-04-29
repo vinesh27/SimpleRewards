@@ -5,3 +5,32 @@ api-version: 1.18
 authors: [ vinesh27, Bastaboii ]
 description: A minimal reward plugin made using Spigot API in Java
 website: https://github.com/vinesh27/simple-rewards
+permissions:
+  simplerewards.*:
+    description: Allows you to obtain all the rewards
+    children:
+      simplerewards.one: true
+      simplerewards.two: true
+      simplerewards.three: true
+      simplerewards.four: true
+      simplerewards.five: true
+  simplerewards.one:
+    description: Allows a player to obtain the first reward
+    default: false
+  simplerewards.two:
+    description: Allows a player to obtain the second reward
+    default: false
+  simplerewards.three:
+    description: Allows a player to obtain the third reward
+    default: false
+  simplerewards.four:
+    description: Allows a player to obtain the fourth reward
+    default: false
+  simplerewards.five:
+    description: Allows a player to obtain the fifth reward
+    default: false
+
+commands:
+  rewards:
+    description: Opens the rewards menu
+    usage: /<command>

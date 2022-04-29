@@ -22,15 +22,15 @@ public class Util {
      * @return String The rank of the player
      */
     public static String getPlayerRank(Player player) {
-        if(player.hasPermission("rewards.rank.five"))
+        if(player.hasPermission("simplerewards.five"))
             return "five";
-        if(player.hasPermission("rewards.rank.four"))
+        if(player.hasPermission("simplerewards.four"))
             return "four";
-        if(player.hasPermission("rewards.rank.three"))
+        if(player.hasPermission("simplerewards.three"))
             return "three";
-        if(player.hasPermission("rewards.rank.two"))
+        if(player.hasPermission("simplerewards.two"))
             return "two";
-        if(player.hasPermission("rewards.rank.one"))
+        if(player.hasPermission("simplerewards.one"))
             return "one";
         else return null;
     }
@@ -109,6 +109,7 @@ public class Util {
     }
     
     public static boolean hasBeenRewarded(Player player, String rank) {
+        
         return false;
     }
     
